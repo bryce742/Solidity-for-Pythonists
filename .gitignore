@@ -13,3 +13,57 @@ states/
 # Optional
 .env
 .env.local
+
+# Environment variables
+.env
+.env.*
+
+# Private keys / secrets
+*.key
+*.pem
+# Secrets
+.env
+.env.*
+private-keys.json
+secrets.json
+# Node / Web3 junk (future-proofing)
+node_modules/
+package-lock.json
+
+# Python (you will use this later with web3.py)
+__pycache__/
+*.pyc
+venv/
+.env/
+
+# OS files
+.DS_Store
+
+# Logs
+*.log
+
+# IDE/editor
+.vscode/
+.idea/
+
+# Temporary / experiments
+*.tmp
+*.bak
+
+# Remix / Solidity artifacts (if you export)
+artifacts/
+cache/
+
+# Coverage / testing
+coverage/
+
+# Hardhat / Foundry (future-proof)
+out/
+broadcast/
+
+# keep this stuff private!
+.local/
+
+.env
+
+
