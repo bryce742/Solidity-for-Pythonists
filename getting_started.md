@@ -56,6 +56,55 @@ You basically end up selecting the .sol file to compile, and can either just com
 ##### Advanced Configurations
 
 
+### Deploy and Run Transactions
+#### Environment
+- compile environment vs deployment environmnet?
+
+##### Choosing a Virtual Machine or Environment
+__
+- Browser Extension
+- Remix VM
+- VM Fork
+- Dev
+- Base
+- WalletConnect
+- Custom -- External HTTP Provider
+
+___
+- Osaka
+- Prague
+- Cancun
+- Shanghai
+- Paris
+- London
+- Berlin
+
+##### You start out with a bunch of testnet accounts on Ethereum!
+- add/import wallets
+- explain more and how this is used
+
+#### Deploy (does so based on the environment?)
+- select a (compiled?) contract
+- value for wei
+- Gas limit
+- Deploy button (Creates a tx and interacts with the contract or deploys it? what is the difference?
+
+
+#### Deployed Contracts
+- once contracts are deployed, they can be interacted with (via transactions?)
+
+
+
+#### Transactions recorder
+- explain
+
+
+### Git
+
+
+
+### Plugin Manager
+
 
 
 ## The Workspace
