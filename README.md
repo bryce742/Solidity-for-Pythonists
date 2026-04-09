@@ -7,7 +7,7 @@ Thinking in State, Storage, and Deterministic Data
 
 ---
 
-## 🧠 Mental Model
+## Mental Model
 
 The basic workflow for working with Solidity (.sol) files is:
 
@@ -18,7 +18,7 @@ The basic workflow for working with Solidity (.sol) files is:
 
 ---
 
-## ❗ Key Difference from Python
+## Key Difference from Python
 
 Unlike Python, Solidity code is NOT run directly.
 
@@ -27,11 +27,10 @@ Smart contracts must be:
 1. **Compiled**
 2. **Deployed** to a blockchain environment (local VM, testnet, or mainnet)
 
-Only then can they be used.
-
+3. Once they have been deployed, an instance of the contract exists at an address on the network, and can now be interacted with
 ---
 
-## 🧱 What is a Smart Contract?
+## What is a Smart Contract?
 
 A deployed contract is a **stateful program (or API) living on-chain**.
 
@@ -46,7 +45,7 @@ It has:
 
 ## 🔄 Types of Interactions
 
-### 🟢 Call (Read-only)
+### 🟢 Call (Read-only)What
 
 * Does NOT change state
 * Does NOT cost gas
