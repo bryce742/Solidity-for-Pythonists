@@ -2,7 +2,7 @@
 
 ## Terminology
 
-## The Basic Workflow
+## The Basic Workflow:
 1. Create/open a .sol file
 2. Compile it
 3. Choose a deployment environment
@@ -11,11 +11,14 @@
 
 
 ## Opening remix for the first time
-- **remix** is a playground for contracts/testing
-- **local repo** for saving work
+- **remix** is a development environment/playground for contracts/testing
+- **local repo** for saving (usually un-deployed) work
 - **GitHub** for backup/file history
-### The workspace contains project files
-It is where we create contracts (write .sol files and scripts) and organize files. Workspaces are saved in the browser (IndexedDB / local storage), meaning that files will persist when we referesh, BUT you can lose everything if clearing the browser data or switching devices.
+
+### The Remix workspace contains project files
+In the workspace tab we create contracts (write .sol files and scripts) and organize files. Workspaces are saved in the browser (IndexedDB / local storage), meaning that files will persist when we referesh, BUT you can lose everything if clearing the browser data or switching devices.
+
+
 #### Saving Remix Work
 Option 1: copy and paste into a local repo when finished with a file/directory
 
@@ -31,6 +34,7 @@ Option 3: connect remix to GitHub via plugin
 contracts/  
 scripts/  
 tests/  
+
 
 ## Writing our first line of solidity code
 - at the top of all .sol files, we always specify the compiler by using `pragma solidity`. what follows defines the version contraint that **pragma solidity** initially tells the compiler
