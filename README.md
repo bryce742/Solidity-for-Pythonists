@@ -43,24 +43,26 @@ It has:
 
 ---
 
-## 🔄 Types of Interactions
+## Types of Interactions (that you can do on a deployed/live contract)
 
-### 🟢 Call (Read-only)What
+### Call (Read-only)
 
 * Does NOT change state
 * Does NOT cost gas
-* Example: reading a value
+* Example: reading a public variable
 
-### 🔴 Transaction (Write)
+### Transaction (Write)
 
 * Changes state
 * Costs gas
 * Recorded permanently on-chain
-* Example: updating a value
+* Example: updating a value or even just deploying a smart contract to the blockchain for the first time! (anything on the blockchain that gets recorded and saved to the 'db' requires a transaction)
 
 ---
 
-## ⚙️ Core Workflow
+## Core Workflow
+
+### Write a smart contract in solidity
 
 ### Compile
 
@@ -68,6 +70,7 @@ It has:
 
 ### Deploy
 
+* requires a transaction since it is writing to the blockchain
 * Creates a **live instance** of the contract
 * Assigns it a **contract address**
 
@@ -81,7 +84,7 @@ It has:
 
 ---
 
-## 📦 What is the ABI?
+## What is the ABI?
 
 The **ABI (Application Binary Interface)** is:
 
@@ -97,7 +100,7 @@ Think of it like:
 
 ---
 
-## ⚠️ Compiler vs Deployment
+## Compiler vs Deployment
 
 * **Compiler environment** ≠ **Deployment environment**
 
@@ -117,26 +120,17 @@ Determines where the contract lives:
 
 ---
 
-## 🧠 Final Intuition
+## Final Intuition
 
 You are NOT:
 ❌ running a script
 
 You ARE:
-✅ deploying a permanent program
-✅ that stores data
-✅ and is interacted with over time
+- deploying a permanent program
+- that stores data
+- and is interacted with over time (via calls or written transactions)
 
 ---
-
-## 🚀 Learning Path
-
-1. Remix IDE basics
-2. First contract
-3. State + storage
-4. Transactions + gas
-5. Mappings and structs
-
 
 
 
