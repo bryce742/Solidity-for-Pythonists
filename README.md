@@ -122,15 +122,12 @@ Determines where the contract lives:
 
 ## Final Intuition
 
-You are NOT:
-❌ running a script
+You are not just running a script.
 
-You ARE:
+You are:
 - deploying a permanent program
 - that stores data
 - and is interacted with over time (via calls or written transactions)
-
----
 
 
 
