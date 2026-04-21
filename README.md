@@ -34,7 +34,7 @@ Smart contracts must be:
 
 A deployed contract is a **stateful program (or API) living on-chain**.
 
-It is NOT just a temporary script or function.
+It is not just a temporary script or function.
 
 It has:
 
@@ -89,20 +89,20 @@ It has:
 The **ABI (Application Binary Interface)** is:
 
 * The interface used to interact with a contract
-* Defines:
+* The ABI defines:
 
   * Available functions
   * Inputs and outputs
 
-Think of it like:
+Think of it as the **compiled contract’s API specification** for how it can be interacted with (who can do what).
 
-> a contract’s API specification
+Much of this ABI comes from getter and methods that are created from 'public' state variables and functions.
 
 ---
 
 ## Compiler vs Deployment
 
-* **Compiler environment** ≠ **Deployment environment**
+* **Compiler environment** != **Deployment environment**
 
 ### Compiler
 
@@ -111,7 +111,7 @@ Think of it like:
 
 ### Deployment Environment
 
-Determines where the contract lives:
+Determines where the contract lives and can be interacted with:
 
 * Local (Remix VM)
 * Testnet

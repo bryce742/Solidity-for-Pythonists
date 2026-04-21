@@ -1,6 +1,10 @@
 # Getting Started with Remix IDE
 
 ## Terminology
+- later
+
+
+
 
 ## The Basic Workflow:
 1. Create/open a .sol file
@@ -12,11 +16,13 @@
 
 ## Opening remix for the first time
 - **remix** is a development environment/playground for contracts/testing
-- **local repo** for saving (usually un-deployed) work
+- your **local repo** for saving work... locally!
 - **GitHub** for backup/file history
 
+It is important to keep in mind that Remix is your PLAYGROUND for once contracts are created, saved, and ready to be deployed (live or on a test VM)
+
 ### The Remix workspace contains project files
-In the workspace tab we create contracts (write .sol files and scripts) and organize files. Workspaces are saved in the browser (IndexedDB / local storage), meaning that files will persist when we referesh, BUT you can lose everything if clearing the browser data or switching devices.
+In the workspace tab we create contracts (write .sol files and scripts) and organize files. Workspaces are saved in the browser (IndexedDB / local storage), meaning that files will persist when we referesh, but **you can lose everything if clearing the browser data or switching devices**.
 
 
 #### Saving Remix Work
@@ -37,31 +43,32 @@ tests/
 
 
 ## Writing our first line of solidity code
-- at the top of all .sol files, we always specify the compiler by using `pragma solidity`. what follows defines the version contraint that **pragma solidity** initially tells the compiler
+At the top of all .sol files, we always specify the compiler by using `pragma solidity`. What follows defines the solidity version contraint applied/shared with the compiler.
 
- command, passing in the compiler to use (as a pattern/version constraint)
-- in the solidity compiler tab, you see this drop down of the latest versions! use the highest one in the drop down that is not a nightly version
 
-It looks like the latest non-nightly named version is 0.8.35
+In the solidity compiler tab, you see this drop down of the latest versions! use the highest one in the drop down that is not a nightly version
+
+As of 4/15/26, the latest non-nightly named version is 0.8.35
 
 ```solidity
 pragma solidity 0.8.35 // exactly uses this version
 ```
-0.8.35
-│ │  └── patch
-│ └──── minor
-└────── major
+0.8.35  
+│ │  └── patch  
+│ └──── minor  
+└────── major  
 
-####  We can instruct to use a pattern of availible versions
-Using a certain version or newer with ^  
+####  We can also pass a less-strict version pattern
+^ tells the compiler to use that version or newer.
+
 ```
-pragma solidity ^0.8.30; # use 0.8.30 or newer that doesn't break compatibility
+pragma solidity ^0.8.30; // use 0.8.30 or newer that doesn't break compatibility
 ```
 - 0.8.30 is allowed
 - 0.8.31 is allowed 
-...
+- ...
 
-Using a range of versions
+**Using a range of versions**
 ```solidity
 pragma solidity >=0.8.0 <0.9.0; // uses any version 0.8 patch
 ```
