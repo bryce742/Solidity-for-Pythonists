@@ -1,4 +1,4 @@
-# Key Takeaways before Starting Contract 3:
+# Key Takeaways before Starting Contract 4:
 - value types never need a data location
 - reference types require a data location when they are in a function, but not if they are for a state variable
 - state variables are stored in storage automatically
@@ -7,7 +7,7 @@
 
 
 
-# third_contract.sol
+# fourth_contract.sol
 In this third contract, we will introduce:
 - mapping
 - require

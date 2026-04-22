@@ -113,7 +113,7 @@ function setName(string memory _newName) public {
 
 Read-Only public function
 ```solidity
-function getName() public view returns (string) {
+function getName() public view returns (string memory) {
     return name;
 }
 ```
@@ -145,5 +145,72 @@ uint external x = 5;
 ```
 
 # third_contract.sol and its syntax
+Our contract has 1 public state variable and 2 private state variables. These variables are set at time of deployment via the constructor.
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract OwnerProfile {
+    address public owner;
+    string private name;
+    uint256 private favoriteNumber;
+
+    constructor(string memory _name, uint256 _favoriteNumber) {
+        owner = msg.sender;
+        name = _name;
+        favoriteNumber = _favoriteNumber;
+    }
+}
 
 
+```
+
+Remember that msg.sender is the wallet that deployed the contract!!
+
+
+`owner` state variable
+- anyone will be able to access it directly (no need to make a getter function, as it is already public and one will be made for it)
+- no one can change it, not even the 'owner' themselves! It can only be set via the constructor called at time of contract deployment
+
+
+`name` state variable
+- only the owner can change it (anyone can try to call the function since it is public, but thanks to the require statement for the setter, the function would exit execution before changing the state variable if the method caller is not the contract owner)
+- no getter method is automaatically created, however, we make a public view function (read-only) that aanyone can call!
+
+```solidity
+function setName(string memory _newName) public {
+    require(msg.sender == owner, "Only the owner can set the name");
+    name = _newName;
+}
+
+function getName() public view returns (string memory) {
+    return name;
+}
+```
+
+`favoriteNumber` state variable
+- can only be accessed via the created getter function (which is read-only)
+- can only be edited by the owner of the contract (thanks to the require statement, giving essentially identical functionality to setName() from earlier)
+
+```solidity
+function setFavoriteNumber(uint256 _favoriteNumber) public {
+    require(msg.sender == owner, "Only contract owner can change name");
+    favoriteNumber = _favoriteNumber;
+}
+
+function getFavoriteNumber() public view returns (uint256) {
+    return favoriteNumber;
+}
+
+```
+
+
+Adding the state-variable summary function
+- anyone can call it!
+- read-only function
+```solidity
+function getSummary() public view returns (address, string memory, uint256) {
+    return (owner, name, favoriteNumber);
+}
+```
